@@ -1,5 +1,5 @@
 function d_log_vol = log_cap_vol(n_dim, d_r, d_h)
-%% LOG_CAP_VOL Hyperspherical cap volume
+%% LOG_CAP_VOL Unit hyperspherical cap volume
 % Compute the log-volume of a height-d_h, radius-d_r cap on the unit
 % n_dim-ball.
 % 
@@ -27,12 +27,13 @@ function d_log_vol = log_cap_vol(n_dim, d_r, d_h)
 % d_a = (n_dim+1)/2
 % d_b = 1/2
 % betainc(.) = MATLAB Regularized incomplete beta function.
-%
-% Alternatively it may be necessary to substitude the following in for
-% betainc if it is not precise enough: 
+
+%% Substituting log(betainc(.))
+% log(betainc(.)) may not be precise enough. It may be necessary to replace
+% this term with more precise ones:
 % log(betainc(.)) = log(B_(d_x)(d_a,d_b)/beta(d_a,d_b))
 %                 = log(B_(d_x)(d_a,d_b)) - betaln(d_a,d_b)
-%                 = log(2F1(d_a+d_b, 1; d_a+1; d_x) + ...
+%                 = log(2F1(d_a+d_b, 1; d_a+1; d_x)) + ...
 %                   d_a*log(d_x) + ...
 %                   d_b*log(1-d_x) - ...
 %                   log(d_a) - ...
