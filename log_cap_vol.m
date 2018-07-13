@@ -1,5 +1,5 @@
 function d_log_vol = log_cap_vol(n_dim, d_r, d_h)
-%% LOG_CAP_VOL Unit hyperspherical cap volume
+%% LOG_CAP_VOL Hyperspherical cap volume
 % Compute the log-volume of a height-d_h, radius-d_r cap on the unit
 % n_dim-ball.
 % 
